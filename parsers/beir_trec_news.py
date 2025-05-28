@@ -1,14 +1,18 @@
 import psycopg2
 from datasets import load_dataset
 from tqdm import tqdm
+import os
+from dotenv import load_dotenv
 
 # === CONFIGURATION ===
+load_dotenv()
+
 DB_CONFIG = {
-    'dbname': 'postgres',
-    'user': 'postgres',
-    'password': 'postgres',
-    'host': 'localhost',
-    'port': '5432'
+    'dbname': os.getenv('POSTGRES_DB'),
+    'user': os.getenv('POSTGRES_USER'),
+    'password': os.getenv('POSTGRES_PASSWORD'),
+    'host': os.getenv('POSTGRES_HOST', 'localhost'),
+    'port': os.getenv('POSTGRES_PORT', '5432')
 }
 TABLE_NAME = 'trec_news_documents'
 

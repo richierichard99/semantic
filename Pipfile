@@ -7,6 +7,7 @@ name = "pypi"
 datasets = "*"
 psycopg2-binary = "*"
 tqdm = "*"
+dotenv = "*"
 
 [dev-packages]
 
