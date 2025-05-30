@@ -8,6 +8,8 @@ datasets = "*"
 psycopg2-binary = "*"
 tqdm = "*"
 dotenv = "*"
+llama-index = "*"
+llama-index-embeddings-huggingface = "*"
 
 [dev-packages]
 
